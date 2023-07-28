@@ -6,3 +6,13 @@
 .card-image-size {
   height: 140px;
 }
+
+.course-desc-container {
+  max-height: 300px;
+}
+
+.course-desc-container-opened {
+  max-height: 700px;
+  transition: all 1s ease;
+  overflow: hidden;
+}

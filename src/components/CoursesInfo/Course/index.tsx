@@ -25,7 +25,7 @@ function Course({ courseInfo }: Props) {
   };
 
   return (
-    <div className="course-container rounded-md">
+    <div className="course-container h-full rounded-md">
       <div
         className={`${
           courseInfo.mainColor === "henry"
@@ -40,9 +40,13 @@ function Course({ courseInfo }: Props) {
           src={courseInfo.logo}
         />
       </div>
-      <div className="bg-gray flex flex-col gap-2 p-4">
+      <div
+        className={`${
+          descOpen ? "course-desc-container-opened" : "course-desc-container"
+        } bg-gray  flex flex-col gap-2 p-4`}
+      >
         <a href={courseInfo.link} className="w-32" target="_blank">
-          <div className="p-2 flex gap-2  bg-white rounded">
+          <div className="p-2 flex gap-2   bg-white rounded">
             <BiLinkAlt size={25} />
             <span className="font-semibold roboto-condensed">
               {courseInfo.name}
@@ -50,7 +54,7 @@ function Course({ courseInfo }: Props) {
           </div>
         </a>
         <div>
-          <p className="text-lg">{shortenedDesc}</p>
+          <p className={`text-lg `}>{shortenedDesc}</p>
           <button className="cursor-default flex justify-center w-full">
             {descOpen ? (
               <AiOutlineClose

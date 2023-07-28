@@ -4,12 +4,10 @@ import Course from "./Course";
 
 function CoursesInfo() {
   return (
-    <section className="bg-black bg-opacity-50">
-      <div className="flex flex-wrap justify-center gap-10 p-10">
-        {coursesInfo.map((course) => {
-          return <Course courseInfo={course} />;
-        })}
-      </div>
+    <section className="bg-black flex flex-wrap gap-10 justify-center p-5 h-min bg-opacity-50">
+      {coursesInfo.map((course) => {
+        return <Course courseInfo={course} />;
+      })}
     </section>
   );
 }
